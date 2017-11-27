@@ -3,7 +3,7 @@ class main {
     public function __construct()
     {
         //print_r($_REQUEST);
-        
+        //set default page request when no parameters are in URL
         $pageRequest = 'homepage';
         //check if there are parameters
         if(isset($_REQUEST['page'])) {
