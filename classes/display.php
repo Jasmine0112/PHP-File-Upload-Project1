@@ -5,16 +5,16 @@ class display extends page
 	{
 		
 		$this->html .= htmltage::tablestart();
-		$csvfile = file("./upload/".$_GET['filename']);//read entire file into array
+		$csvfile = file("./upload/".$_GET['filename']);
 		foreach($csvfile as $i =>$k)
 		{
 			$this->html .= htmltage::tablelinestart();
-			foreach(explode(",",$k) as $j)//convert csvfile into array
+			foreach(explode(",",$k) as $j)
 			{
 				$this->html .= htmltage::tabledetail($j);
 			}
 			$this->html .= htmltage::tablelineend();
-		}     //data output
+		}    
 		$this->html .= htmltage::tableend();
 	}
 }
