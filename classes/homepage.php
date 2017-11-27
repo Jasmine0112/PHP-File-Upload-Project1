@@ -3,9 +3,10 @@ class homepage extends page
 {
 	public function get()
 	{
-		$this->html .= stringfunction::printThis("Welcome");
-		header('Location:index.php?page=upload');
+		
+		header('Location:index.php?page=upload');//tansfer user to page of upload
 	}
     
 }
  ?>
+ 
